@@ -1,0 +1,12 @@
+[package]
+name = "sais-rs"
+version = "0.1.0"
+authors = ["Julian Wiesler <wiesleju@gmail.com>"]
+edition = "2018"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "benchmark_sais"
+harness = false

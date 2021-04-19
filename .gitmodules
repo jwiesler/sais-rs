@@ -1,0 +1,3 @@
+[submodule "gauntlet_corpus"]
+	path = gauntlet_corpus
+	url = https://github.com/michaelmaniscalco/gauntlet_corpus
