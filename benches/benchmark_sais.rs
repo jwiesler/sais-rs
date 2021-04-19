@@ -3,7 +3,7 @@ use std::io::Read;
 use std::ops::AddAssign;
 use std::time::{Duration, Instant};
 
-use criterion::{black_box, criterion_group, criterion_main, Criterion};
+use criterion::{criterion_group, criterion_main, Criterion};
 
 use sais_rs::sort;
 
@@ -39,12 +39,7 @@ fn sort_benchmark(c: &mut Criterion) {
                     buckets.fill(Default::default());
 
                     let start = Instant::now();
-                    sort(
-                        black_box(&text),
-                        black_box(&mut indices),
-                        black_box(&mut types),
-                        black_box(&mut buckets),
-                    );
+                    sort(&text, &mut indices, &mut types, &mut buckets);
                     duration.add_assign(start.elapsed())
                 }
                 duration
